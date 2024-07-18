@@ -1,0 +1,119 @@
+body
+{ 
+   background-color: lightblue;
+    font-size: 14pt;
+}
+section
+{
+    width:45%;
+    display:inline-block;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+header
+{
+text-align: center;
+background-color: cadetblue;
+color:red;
+padding: 2px;
+vertical-align: bottom;
+margin-right: 5px;
+}
+footer
+{
+    font-size: 0.8cm;
+    font-style: italic;
+    position:fixed;
+    bottom:0px;
+    text-align: center;
+    width: 100%;
+}
+li{
+    padding: 2px;
+    background-color: burlywood;
+    color:brown;
+    margin: 2px;
+}
+ul{
+    list-style: upper-roman;
+}
+ol{
+    list-style: upper-roman;
+}
+li:hover{
+    background-color: brown;
+    color: burlywood;
+}
+p{color: blue;}
+
+a{background-color: coral;
+color: black;
+margin :5px;
+padding: 5px;}
+nav{
+    background-color: darkgrey;
+    color:darkgreen;
+    margin-left: 5px;
+    font-size: 14pt;
+    text-align: center;
+}
+.jumbo{
+    font-size: 38pt;
+    padding: 15pt;
+    background-color:darkkhaki ;
+    text-align: center;
+}
+nav>ul{
+    list-style: none;
+}
+nav>ul>li{
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+}
+nav>ul>li>a{
+    background-color: yellow;
+    color:brown;
+
+}
+table{
+    
+    width: 65%;
+    border: 2px solid red;
+}
+tr:nth-child(even){
+    background-color: greenyellow;
+}
+tr:nth-child(odd){
+    background-color:green ;
+}
+.postcard{
+    border:2px solid blue;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow:2px 2px 2px 2px lightseagreen; ;
+}
+.rounded{
+    border-radius: 50%;
+    float:right;
+    width: 45%;
+}
+.polaroid{
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 lightpink;
+    margin-bottom: 25px;
+    float: left;
+    height: 175px;
+}
+.row{
+    width: 100%;
+    text-align: left;
+    vertical-align: top;
+    border:2px solid red ;
+    height: 400px;
+}
+
+

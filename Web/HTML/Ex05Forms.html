@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
+    <title>Forms</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Ex01Basics.html">HTML Page</a></li>
+            <li><a href="Ex02Lists.html">Lists Page</a></li>
+            <li><a href="Ex03Tables.html">Table Page</a></li>  
+            <li><a href="Ex04images.html">Images Page</a></li>
+            <li><a href="Ex05Forms.html">Current Page</a></li>
+        </ul>
+    </nav>
+    <h2>Understanding Forms Examples</h2>
+    <article>
+        <h2>
+            Using  HTML Forms Concept</h2>
+            <p>
+                Forms are used to fill the data and other kind of stuffs.
+            </p>
+        </h2>
+    </article>
+    <form>
+        <h1>Student Registration Form</h1>
+        <hr>
+        <p>Enter the Name:<input type="text" placeholder="Name Please!"></p>
+        <p>Enter the Email:<input type="email" placeholder="Email Please!"></p>
+        <p>Enter the Date of Birth:<input type="date" placeholder="Date of Birth"></p>
+        <p>Select The Qualification
+            <select>
+                <option>Post-Graduation</option>
+                <option>Graduation</option>
+                <option>12</option>
+                <option>10</option>
+            </select>
+        </p>
+
+        <p>Select The Home City
+            <datalist id="dtCities" aria-placeholder="Home City">
+                <option>Patna</option>
+                <option>Bangalore</option>
+                <option>Delhi</option>
+                <option>Chennai</option>
+                <option>Kolkata</option>
+                <option>Mumbai</option>
+                <option>Pune</option>
+            </datalist>
+            <input list="dtCities" placeholder="City Name"/>
+        </p>
+        <p>
+            Enter The Gender:
+            <input type="radio" name="rdGender" id="rdGender">Male
+            <input type="radio" name="rdGender" id="rdGender">Female
+            <input type="radio" name="rdGender" id="rdGender">Others
+        </p>
+        <p>Rate Yourself on HTMLand CSS from 1 to 10
+        <input type="range" min="0" max="10"></p>
+        <input type="submit" value="Register"/>
+    </form>
+        
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        div
+        {
+            border:2px solid blue;
+            box-shadow: 2px 2px 1px 1px red;
+            width: 40%;
+            margin: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Example</title>
+<script src="ExAddingElements.js"></script>
+<script src="Ex05Function.js"></script>
+    <script>
+
+        function onClick()
+{
+    let name=document.getElementById("txtName").value;
+    document.getElementById("spDisplay1").innerText="The entered name is"+" "+name+" "+"."
+}
+
+function deleteItem(item)
+{
+removeitem(item);
+populateItems();
+}
+
+function populateItems()
+{
+            let items=getAllitems();
+            let ul=document.getElementById("isitems")
+            ul.innerHTML="";
+            for(const item of items)
+            {
+                let line =`<li>${item} 
+                    <a href="#" onclick="deleteItem('${item}')">x</a></li>`
+                ul.innerHTML+=line;
+            }
+}
+
+function onAdditem()
+{
+            //get the value to add
+            const item =document.getElementById("txtitem").value;
+            //call the addtocart func from the external js file
+            Additem(item);
+            //populate the data into the ul tag
+            let items = getAllitems();
+            let ul = document.getElementById("isitems");
+            ul.innerHTML="";
+            for(const item of items)
+            {
+                let line = `<li>${item}<a href ="#" onclick="deleteItem('${item}')">x</a></li>`
+                ul.innerHTML+=line;
+            }
+}
+        function onGetResult()
+{
+        let v1=parseFloat((document.getElementById("txtFirstValue")).value)
+        let v2=parseFloat((document.getElementById("txtSecondValue")).value)
+        let op=document.getElementById("sloption").value
+        let p=document.getElementById("pResult")
+
+        
+            switch(op)
+            {
+                case "Add":p.innerText=AddFun(v1,v2);
+                break;
+                case "Subtract":p.innerText==SubFun(v1,v2);
+                break;
+                case "Multiply":p.innerText==MulFun(v1,v2);
+                break;
+                case "Divide":p.innerText==DivFun(v1,v2);
+                break;
+               default:alert("Unrecognized Choice");
+                break;
+            }
+} 
+
+</script>
+</head>
+<body>
+<div>
+        
+        <h1>Example of DOM usage</h1>
+ </hr>
+    <p>Enter The Name:
+        <input id="txtName" placeholder="Name Please!!!"/>
+        <button onclick="onClick()">Submit</button>
+    </p>
+
+    <p style="color: red">
+        <span id="spDisplay1"></span></p>
+</div>
+<div>
+        <h1>Math Calc</h1>
+    </hr>
+    <p>Enter The First Value:
+        <input type="number" id="txtFirstValue"/></p>
+        <p>Enter The Second Value:
+        <input type="number" id="txtSecondValue"/></p>
+    <p>
+        Select The Option:<select id="sloption">
+        <option>Add</option>
+        <option>Subtract</option>
+        <option>Multiply</option>
+        <option>Divide</option></select>
+    </p>
+    <button onclick="onGetResult()">Get Result</button>
+    <p id="pResult" style="border:2px dashed;color: indianred;"></p>
+        </div>
+</div>
+
+  
+<div>
+    <h1>Adding and Removing elements to Array</h1>
+    <hr>
+    <p>
+        enter the item name:
+        <input placeholder="Enter the item name"id = "txtitem"/>
+        <button onclick="onAdditem()">Add to cart</button>
+    </p>
+    <p>
+        List of items with us : </br>
+        <ul id ="isitems"></ul>
+    </p>
+</div>
+
+
+    </body>
+</html>
