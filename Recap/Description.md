@@ -1,1 +1,1 @@
-This folder conatins Student Program using Class Library,Console App and and .Net Frameworks.
+This folder conatins Student Program using Class Library,Console App and and .Net Framework.
