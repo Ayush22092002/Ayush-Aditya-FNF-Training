@@ -1,0 +1,51 @@
+﻿@model SampleMvccApiClient.Models.Stock
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Stock</h4>
+    <hr />
+    @if (ViewBag.Error != null)
+    {
+        <p class="text-danger">@ViewBag.Error</p>
+    }
+    <form asp-action="Details" method="post">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StockID)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.EditorFor(model => model.StockID)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StockName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.EditorFor(model => model.StockName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StockDescription)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.EditorFor(model => model.StockDescription)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.EditorFor(model => model.UnitPrice)
+            </dd>
+        </dl>
+        <button type="submit">Save Changes</button>
+    </form>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+<div>
+

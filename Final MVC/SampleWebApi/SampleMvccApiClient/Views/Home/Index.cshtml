@@ -1,0 +1,33 @@
+﻿@model List<SampleMvccApiClient.Models.Stock>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Stock Exchange</h1>
+    <div>
+        <table class="table table-bordered table-striped">
+            <thead class="bg-info">
+                <tr>
+                    <th>Stock Id</th>
+                    <th>Stock Name</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.StockID</td>
+                        <td>@item.StockName</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.StockID" class="btn btn-info">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@item.StockID" class="btn btn-danger">Delete</a>
+                        </td>
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
